@@ -83,6 +83,7 @@ do
     "hpc-user")
       echo "Selected: HPC user environment (no sudo)"
       # source init/init-mousterian-hpc.sh
+      # source stow/stow-mousterian-hpc.sh
       break
       ;;
     "stow-only")
