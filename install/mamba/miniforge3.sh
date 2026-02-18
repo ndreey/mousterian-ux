@@ -5,9 +5,13 @@ wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge
 
 # Start the interactive intallation. CHOOSE TO INITIALIZE THE SHELL WHEN PROMPTED
 sh Miniforge3-Linux-x86_64.sh
-
+rm Miniforge3-Linux-x86_64.sh
 # Set changes
 source $HOME/.bashrc
+
+# add conda and mamba to start when terminal initiates.
+conda init bash
+mamba init bash
 
 # Set channels
 conda config --add channels conda-forge

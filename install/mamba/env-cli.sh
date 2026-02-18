@@ -2,4 +2,5 @@
 
 source $HOME/.bashrc
 
-mamba create -n cli -c bioconda -c conda-forge wget curl stow tree tmux git pigz
+# Good to have tools
+mamba create -n cli -c bioconda -c conda-forge stow tree tmux pigz bzip2 -y

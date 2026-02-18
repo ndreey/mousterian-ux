@@ -24,6 +24,8 @@ ascii_art="
 "
 echo -e "$ascii_art"
 
+sleep 1
+
 echo "Select installation mode (exit installer with ctrl+c):"
 echo "1) Fresh Ubuntu install with GNOME (sudo required)"
 echo "2) HPC user environment (no sudo)"
@@ -72,23 +74,24 @@ do
       source backup/oldowan-backup.sh
 
       # Install mousterian toolkit and ux
-      # source init/init-mousterian-ux.sh
+      source init/init-mousterian-ux.sh
       
       # Revert to normal idle and lock settings
       gsettings set org.gnome.desktop.screensaver lock-enabled true
       gsettings set org.gnome.desktop.session idle-delay 300
 
+      echo -e "install complete! Reboot to finalize everything"
       break
       ;;
     "hpc-user")
-      echo "Selected: HPC user environment (no sudo)"
-      # source init/init-mousterian-hpc.sh
-      # source stow/stow-mousterian-hpc.sh
+      echo -e "Selected: HPC user environment (no sudo)\n"
+      echo -e "Be prepared to interact with install prompts"
+      source init/init-mousterian-hpc.sh
+      source $HOME/.bashrc
       break
       ;;
     "stow-only")
       echo "Selected: Stow dotfiles and configs only (no install)"
-      # source backup/oldowan-backup.sh
       source init/init-stow.sh
       break
       ;;

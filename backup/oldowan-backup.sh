@@ -10,6 +10,7 @@ echo "Backing up existing dotfiles and configs to $BAK..."
 # Files to backup (add/remove as needed)
 FILES=(
   "$HOME/.bashrc"
+  "$HOME/.bashrc.bak"
   "$HOME/.profile"
   "$HOME/.gitconfig"
   "$HOME/.tmux.conf"
