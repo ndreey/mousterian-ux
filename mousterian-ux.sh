@@ -87,7 +87,7 @@ do
       echo -e "Selected: HPC user environment (no sudo)\n"
       echo -e "Be prepared to interact with install prompts"
       source init/init-mousterian-hpc.sh
-      source $HOME/.bashrc
+      echo -e "Install complete! You need to restart your terminal or source your bashrc to use the new HPC tools and configs"
       break
       ;;
     "stow-only")
