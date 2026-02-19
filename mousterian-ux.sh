@@ -1,6 +1,7 @@
 #!/bin/bash
 
 MOUST_VERSION="v0.1.0"
+
 # Exit immediately if a command exits with a non-zero status
 set -e
 
@@ -67,7 +68,7 @@ do
       # Ensure computer doesn't go to sleep or lock while installing
       gsettings set org.gnome.desktop.screensaver lock-enabled false
       gsettings set org.gnome.desktop.session idle-delay 0
-      echo "Installing the mousterian toolkit and ux $MOUST_VERSION..."
+      echo "Installing $MOUST_VERSION of the mousterian toolkit and ux..."
       echo -e "Be prepared to enter your password multiple times and accept GNOME extensions\n"
 
       # Backup dotfiles before installing
@@ -83,20 +84,30 @@ do
       echo -e "install complete! Reboot to finalize everything"
       break
       ;;
+
+    # Install the HPC or user friendly core toolkit
     "hpc-user")
       echo -e "Selected: HPC user environment (no sudo)\n"
-      echo -e "Be prepared to interact with install prompts"
+      echo "Installing $MOUST_VERSION of the core mousterian toolkit that is safe for HPC and user.."
+      echo -e "Be prepared to interact with prompts\n"
+
+      # Install the mamba env and stow the dotfiles and configs for the HPC user environment
       source init/init-mousterian-hpc.sh
-      echo -e "Install complete! You need to restart your terminal or source your bashrc to use the new HPC tools and configs"
+
+      echo -e "Install complete!"
+      echo -e "You need to restart your terminal or source your ~/.bashrc"
       break
       ;;
+    
+    # Just backup and stow the dotfiles and configs, no installs or checks
     "stow-only")
       echo "Selected: Stow dotfiles and configs only (no install)"
       source init/init-stow.sh
       break
       ;;
+    
+    # Just check permissions, os release and desktop environment, but don't install anything
     "check-only")
-      # Check os release and desktop environment and sudo access, but don't install anything
       echo -e "Selected: Check permissions, OS and desktop environment (no install)\n"
       source /etc/os-release
       echo "OS: $PRETTY_NAME"

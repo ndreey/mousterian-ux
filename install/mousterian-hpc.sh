@@ -1,6 +1,24 @@
 #!/bin/bash
 
-# Run hpc installers
-#for installer in install/hpc/*.sh; do source $installer; done
+# Back up bashrc
+[ -f $HOME/.bashrc ] && cp $HOME/.bashrc $HOME/.bashrc.bak
 
-echo -e "mousterian-hpc.sh is currently a placeholder for HPC-specific tools and configs. It will be updated in the future with HPC-specific installations and stow commands. For now, it does not perform any actions."
+# Install mamba and basic environment
+source install/mousterian-mamba.sh
+
+# Activate the cli env and stow the toolkit dotfiles
+mamba activate cli
+sleep 2
+
+# Backup dotfiles first
+source backup/oldowan-backup.sh
+
+# stow the dotfiles
+source stow/stow-mousterian-toolkit.sh
+
+# populate .bashrc with conda and mamba init lines
+conda init bash
+mamba shell init
+
+mamba deactivate
+sleep 2
