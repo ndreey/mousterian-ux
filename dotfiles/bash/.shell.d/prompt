@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Function to get git branch
+git_br() {
+    git branch --show-current 2>/dev/null
+}
+
+# Color if possible, else plain
+case "$TERM" in
+    xterm-color|*-256color|xterm)
+        PS1="\[\e[0;33m\]\W\[\e[0;37m\] @\h\[\e[0m\]\[\e[01;37m\]\$(git_br)\[\e[0m\]: "
+        ;;
+    *)
+        PS1="\W @\h\$(git_br): "
+        ;;
+esac

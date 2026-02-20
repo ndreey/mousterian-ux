@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Safely add to PATH
+add_to_path() {
+    [ -d "$1" ] && [[ ":$PATH" != *":$1:"* ]] && export PATH="$PATH:$1"
+}
+
+# Generic paths that should always be added
+add_to_path "$HOME/.local/bin"
+add_to_path "$HOME/bin"

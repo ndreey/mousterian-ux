@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Load global bashrc if it exists
+if [ -f /etc/bashrc ]; then
+	 source /etc/bashrc
+fi
+
+# Source custom
+source $HOME/.shell.d/functions
+source $HOME/.shell.d/shell
+source $HOME/.shell.d/prompt
+source $HOME/.shell.d/aliases
+
+export INPUTRC=$HOME/.shell.d/inputrc
