@@ -9,6 +9,9 @@ source install/mousterian-mamba.sh
 # Install desktop tools and tweaks
 source install/mousterian-desktop.sh
 
+# Backup dotfiles before installing
+source backup/oldowan-backup.sh
+
 # Stow dotfiles
 source stow/stow-mousterian-ux.sh
 
