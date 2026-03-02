@@ -29,10 +29,9 @@ done
 
 if [[ ${#EXISTING[@]} -eq 0 ]]; then
   echo "No existing dotfiles found. Nothing to backup."
-  exit 0
+else
+  echo "Found ${#EXISTING[@]} files to backup."
+  rsync -a --relative --remove-source-files "${EXISTING[@]}" "$BAK/"
+  echo "Backup complete."
+  echo "Path to the Oldowan site: $BAK"
 fi
-
-rsync -a --relative --remove-source-files "${EXISTING[@]}" "$BAK/"
-
-echo "Backup complete."
-echo "Path to the Oldowan site: $BAK"
