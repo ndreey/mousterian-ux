@@ -16,3 +16,19 @@ sudo apt update
 sudo apt install -y code
 
 mkdir -p $HOME/.config/Code/User
+
+# Install current using themes
+code --install-extension andreilucaci.everforest-pro
+code --install-extension rokoroku.vscode-theme-darcula
+
+# ssh and hpc related
+code --install-extension ms-vscode-remote.remote-ssh
+code --install-extension ms-vscode.live-server
+
+# Language support
+code --install-extension nextflow.nextflow
+
+# Quality of life
+code --install-extension mechatroner.rainbow-csv
+code --install-extension yzhang.markdown-all-in-one
+code --install-extension shd101wyy.markdown-preview-enhanced
