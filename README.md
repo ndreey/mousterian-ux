@@ -52,7 +52,7 @@ Choose your mode when prompted.
 `tmux` · `tree` · `vim` · `stow` · `pipx` · build essentials
 
 #### Desktop apps (Ubuntu mode)
-VS Code · Obsidian · Inkscape · VLC · LibreOffice · Flameshot · LocalSend · Ulauncher
+VS Code · Obsidian · Inkscape · VLC · LibreOffice · Flameshot · LocalSend · Ulauncher · Alacritty
 
 #### Mamba environments for basics
 - **cli** — everyday tools (pigz, wget, curl, git)
@@ -70,13 +70,14 @@ VS Code · Obsidian · Inkscape · VLC · LibreOffice · Flameshot · LocalSend 
 
 | Config | What it sets up |
 |--------|-----------------|
+| alacritty | settings and theme|
 | bash | Aliases, history, PATH, prompt |
 | git | Name, email, sensible defaults (mine, customize this yourself)|
 | vscode | Editor settings, extensions, themes|
 | gtk | Theme preferences |
 | ulauncher | App launcher settings |
 
-Configs are copied (not symlinked) to keep things simple. Your old configs are backed up to `~/oldowan-backup/` with a timestamp, just in case.
+Configs are copied. Not symlinked nor using `gnu stow`. Your old configs are backed up to `~/oldowan-backup/` with a timestamp, just in case.
 
 ---
 
