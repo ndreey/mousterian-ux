@@ -15,6 +15,7 @@ FILES=(
   "$HOME/.shell.d"
   "$HOME/.gitconfig"
   "$HOME/.tmux.conf"
+	"$HOME/.config/alacritty"
   "$HOME/.config/autostart"
   "$HOME/.config/gtk-3.0/settings.ini"
   "$HOME/.config/gtk-4.0/settings.ini"

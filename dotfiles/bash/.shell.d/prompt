@@ -5,12 +5,34 @@ git_br() {
     git branch --show-current 2>/dev/null
 }
 
-# Color if possible, else plain
+# Set terminal window title
+set_title() {
+    echo -ne "\033]0;${HOSTNAME%%.*}\007"
+}
+
 case "$TERM" in
-    xterm-color|*-256color|xterm)
-        PS1="\[\e[0;33m\]\W\[\e[0;37m\] @\h\[\e[0m\]\[\e[01;37m\] \$(git_br)\[\e[0m\]: "
+    xterm-color|*-256color|xterm|alacritty)
+        # Title updates before every prompt
+        PROMPT_COMMAND='set_title'
+
+        # Slim prompt: just basename + git branch
+        PS1="\[\e[0;33m\]\W\[\e[01;37m\] \$(git_br)\[\e[0m\]: "
         ;;
     *)
-        PS1="\W @\h\$(git_br): "
+        # Fallback for dumb terminals — keep everything inline
+        PS1="\W @\h \$(git_br): "
         ;;
 esac
+
+
+
+### OLD VERSION
+## Color if possible, else plain
+#case "$TERM" in
+#    xterm-color|*-256color|xterm)
+#        PS1="\[\e[0;33m\]\W\[\e[0;37m\] @\h\[\e[0m\]\[\e[01;37m\] \$(git_br)\[\e[0m\]: "
+#        ;;
+#    *)
+#        PS1="\W @\h\$(git_br): "
+#        ;;
+#esac

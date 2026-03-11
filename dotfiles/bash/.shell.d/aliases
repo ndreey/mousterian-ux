@@ -6,3 +6,4 @@ if command -v sacct &>/dev/null; then
 fi
 
 alias du="du -hx --max-depth=1"
+alias ls="ls -F"
