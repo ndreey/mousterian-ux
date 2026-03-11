@@ -7,4 +7,3 @@ case $- in
 esac
 
 [ -f ~/.shell.d/rc ] && . ~/.shell.d/rc
-

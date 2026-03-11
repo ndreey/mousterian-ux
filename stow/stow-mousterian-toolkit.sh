@@ -1,7 +1,11 @@
 #!/bin/bash
 
-# Stow dotfiles and configs that are safe in any system
-cd dotfiles/
-stow -t $HOME bash/
-stow -t $HOME git/
-cd -
+DOTFILES=dotfiles
+
+# bash
+cp "$DOTFILES/bash/.bashrc" "$HOME/"
+cp "$DOTFILES/bash/.profile" "$HOME/"
+cp -r "$DOTFILES/bash/.shell.d" "$HOME/"
+
+# git
+cp "$DOTFILES/git/.gitconfig" "$HOME/"

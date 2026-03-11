@@ -12,6 +12,7 @@ FILES=(
   "$HOME/.bashrc"
   "$HOME/.bashrc.bak"
   "$HOME/.profile"
+  "$HOME/.shell.d"
   "$HOME/.gitconfig"
   "$HOME/.tmux.conf"
   "$HOME/.config/autostart"
@@ -31,7 +32,7 @@ if [[ ${#EXISTING[@]} -eq 0 ]]; then
   echo "No existing dotfiles found. Nothing to backup."
 else
   echo "Found ${#EXISTING[@]} files to backup."
-  rsync -a --relative --remove-source-files "${EXISTING[@]}" "$BAK/"
+  rsync -aL --relative --remove-source-files "${EXISTING[@]}" "$BAK/"
   echo "Backup complete."
   echo "Path to the Oldowan site: $BAK"
 fi
