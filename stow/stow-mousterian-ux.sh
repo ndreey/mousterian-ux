@@ -2,7 +2,11 @@
 
 DOTFILES=dotfiles
 
-mkdir -p "$HOME/.config/"{autostart,gtk-3.0,ulauncher} 
+mkdir -p "$HOME/.config/"{autostart,gtk-3.0,ulauncher,alacritty}
+
+# alacritty
+cp "$DOTFILES/alacritty/alacritty.toml" "$HOME/.config/alacritty/"
+cp "$DOTFILES/alacritty/everforest_dark_hard.toml" "$HOME/.config/alacritty/"
 
 # bash
 cp "$DOTFILES/bash/.bashrc" "$HOME/"
