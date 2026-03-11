@@ -1,11 +1,11 @@
-import = ["~/.config/alacritty/alacritty-theme/themes/everforest_dark_hard.toml"]
+import = ["~/.config/alacritty/everforest_dark_hard.toml"]
 
 
 
 [window]
 padding.x = 5
 padding.y = 5
-opacity = 1
+opacity = 0.88
 blur = true
 title = "pack lightly, travel far"
 decorations = "Full"
