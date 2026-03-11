@@ -1,97 +1,131 @@
+<img align="right" src="images/rock_tools.jpg" alt="Stone tools" width="30%">
+
 # mousterian-ux
 
-**Fast setup for Ubuntu and HPC work environments.**
+A workspace toolkit for bioinformaticians who move between systems.
 
-```
+Named after the Mousterian stone tools which worked across continents for 300,000 years. This repo will probably need updating next month. But the principle is the same: carry tools that work anywhere.
 
-           ⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-           ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠛⠲⠦⠤⣄⣀⠀⢀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-           ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣀⠀⠀⠀⠀⠀⠘⠿⠟⠀⢤⠀⣠⣤⣄⠀⠀⠀
-           ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⣿⣿⡆⠀⠀⠀⠀⢰⡖⠀⠀⠀⠀⠙⠿⠿⠓⠀⠀
-           ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢿⣿⣿⠃⠀⠀⠀⠀⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-           ⠀⠀⠀⠀⠀⢀⣠⣤⣤⣤⣄⡉⠁⣠⡄⢀⣀⣼⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-           ⠀⠀⠀⠀⣰⣿⣿⠟⣿⣿⡿⠁⣴⣿⠁⡸⠿⠿⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-           ⠀⠀⠀⢰⡿⠋⠀⢰⠿⠋⡀⢈⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-           ⠀⠀⠀⣿⡇⠀⠀⠠⠴⣾⣿⣿⣯⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-           ⠀⠀⠀⠉⠁⠀⠀⢀⣀⣼⣿⡿⠿⠿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-           ⠀⠀⠀⠀⠀⠀⠀⠈⠛⣿⠿⣄⠀⢠⣾⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-           ⠀⠀⠀⠀⠀⠀⢀⣿⠀⠁⠀⠁⠀⠀⠉⢿⣿⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-           ⠀⢀⣤⣤⣤⣤⣾⡿⠃⠀⠀⠀⠀⠀⠀⠘⣿⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-           ⠀⠀⠀⠀⠀⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⢿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-           ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-```
+This repo sets up a productive workspace with one command. It installs what you need, configures what helps, and stays close to defaults so you can feel at home on any Linux machine.
 
-## Quick Start
 
+### What is this?
+
+A bootstrap script that turns a fresh Ubuntu install (or an HPC account) into a working environment for computational biology.
+
+It backs up your existing configs, installs useful tools, sets up conda/mamba, and deploys sensible dotfiles. Nothing fancy. Nothing fragile.
+
+**This is not the best setup.** It's *my* setup - an evolutionary bioinformatician who works mostly with genomics. It works well for me. It might work for you. Or it might be a starting point for something better.
+
+Heavily inspired by [Omakub](https://omakub.org/) by DHH, but tilted toward science rather than web development.
+
+**OBS!** This is a work in progress and is not finalized yet.
+
+---
+
+### Quick start and a warning...
+There are no current fail safes. No current ways to undo. Read the scripts so you understand what will occur. You do this on your own risk at the moment.
 ```bash
+git clone https://github.com/ndreey/mousterian-ux.git
+cd mousterian-ux
 bash mousterian-ux.sh
 ```
 
-Choose your installation mode when prompted.
+Choose your mode when prompted.
 
-## Installation Modes
 
-### 1. **Fresh Ubuntu Install** (requires sudo)
-Complete desktop setup for a new Ubuntu machine with GNOME desktop.
+---
 
-**Installs:**
-- Terminal tools: tmux, stow, tree (essentials)
-- Bioinformatics libraries: build tools, imagemagick, SQLite, PostgreSQL client, Redis tools, etc.
-- Desktop apps: Flatpak, VSCode, VLC, Inkscape, LibreOffice, Obsidian, Flameshot, LocalSend
-- GNOME tweaks: custom hotkeys, theme, dock settings, extensions
-- Mamba/Conda: Miniforge with bioconda and conda-forge channels
-- Dotfiles: bash, git, VS Code, GNOME, ulauncher configs
+### Installation modes
 
-**Use case:** New machine, full environment setup
+| Mode | What it does | Needs sudo? |
+|------|--------------|-------------|
+| **Fresh Ubuntu** | Full desktop setup with apps, GNOME tweaks, mamba, dotfiles | Yes |
+| **HPC environment** | Lightweight setup for clusters — mamba, basic tools, safe dotfiles | No |
+| **Dotfiles only** | Just deploy configs, install nothing | No |
+| **Check system** | See what you're working with before committing | No |
 
-### 2. **HPC User Environment** (no sudo required)
-Lightweight setup for HPC clusters or shared systems where you lack root.
+---
 
-**Installs:**
-- Mamba/Conda: Downloads and initializes Miniforge locally
-- Mamba environments: `cli` env with wget, curl, stow, tree, tmux, git, pigz
-- Dotfiles: Safe configs (bash, git only—no GNOME/desktop-specific stuff)
+### What gets installed
 
-**Use case:** HPC login nodes, shared systems, or minimal installations
+#### Terminal tools
+`tmux` · `tree` · `vim` · `stow` · `pipx` · build essentials
 
-### 3. **Stow Dotfiles Only**
-Symlink your dotfiles without installing anything. Choose:
-- **Desktop setup**: All dotfiles (bash, git, VS Code, GNOME, ulauncher, GTK)
-- **Core setup**: Safe-everywhere dotfiles (bash, git only)
+#### Desktop apps (Ubuntu mode)
+VS Code · Obsidian · Inkscape · VLC · LibreOffice · Flameshot · LocalSend · Ulauncher
 
-**Use case:** Existing systems, re-deploying configs, testing dotfile changes
+#### Mamba environments for basics
+- **cli** — everyday tools (pigz, wget, curl, git)
+- **qc** — quality control (pigz, seqkit, bbmap, multiqc, fastqc, samtools, bedtools, bzip2)
 
-### 4. **Check System**
-Verify OS, desktop environment, and sudo access without installing.
+#### GNOME tweaks
+- Workspace switching with `Super+1/2/3/4/5/6`
+- Window moving with `Super+Shift+1/2/3/4/5/6`
+- Clean dock, alphabetical app grid
+- A few tasteful extensions (blur, space-bar, just-perfection)
 
-**Use case:** Verify compatibility before running installers
+---
 
-## What Gets Installed
+### Dotfiles included
 
-### Terminal Stack
-- `tmux` — terminal multiplexer
-- `stow` — dotfile symlinker
-- `tree`, `wget`, `curl`, `git`
-- Build tools, libraries for development (clang, rustc, etc.)
+| Config | What it sets up |
+|--------|-----------------|
+| bash | Aliases, history, PATH, prompt |
+| git | Name, email, sensible defaults (mine, customize this yourself)|
+| vscode | Editor settings, extensions, themes|
+| gtk | Theme preferences |
+| ulauncher | App launcher settings |
 
-### Desktop Apps (Fresh Install Only)
-- **VS Code** — editor
-- **Inkscape**, **LibreOffice**, **VLC** — creative & media
-- **Obsidian** — note-taking
-- **Flameshot** — screenshots
-- **LocalSend** — file sharing
-- **Flatpak** + flathub — app installer
+Configs are copied (not symlinked) to keep things simple. Your old configs are backed up to `~/oldowan-backup/` with a timestamp, just in case.
 
-### Bioinformatics Stack
-- **Mamba/Conda** — package manager (uses bioconda + conda-forge)
-- Development libraries: libssl, zlib, libyaml, imagemagick, mupdf, etc.
-- Database clients: PostgreSQL, MySQL, SQLite, Redis tools
-- Environments: `cli` (basic tools), `qc` (optional QC tools)
+---
 
-### Dotfiles Deployed
-- `bash/` — bashrc, profile, aliases
-- `git/` — gitconfig
-- `vscode/` — editor settings & extensions
-- `gtk/` — theme settings
-- `ulauncher/` — app launcher config
-- `autostart/` — GNOME autostart apps
+### Project structure
+```
+mousterian-ux/
+├── mousterian-ux.sh          # start here
+├── init/                     # orchestration scripts
+├── install/                  # package installers
+│   ├── terminal/             # CLI tools
+│   ├── desktop/              # GNOME apps and tweaks
+│   └── mamba/                # conda/mamba setup
+├── stow/                     # dotfile deployment
+├── backup/                   # config backup script
+└── dotfiles/                 # the actual configs
+    ├── bash/
+    ├── git/
+    ├── vscode/
+    └── ...
+```
+
+---
+
+
+### Requirements
+
+- Ubuntu 22.04+ (desktop mode) or any Linux with bash (HPC mode)
+- Internet connection
+- About 5-25 minutes and a cup of coffee
+
+---
+
+### Acknowledgments
+
+This project is inspired by [Omakub](https://omakub.org/), which does something similar for web developers. If you're not doing science, Omakub is probably what you want.
+
+
+
+Illustrations are by **Zdenek Burian** from the books "*Great Discoveries*" and "*Life-Blown*" published in 1957 and 1962. All rights remain with the original author(s).
+
+
+
+
+
+---
+
+<div align="center">
+  <img src="images/journey.jpg" alt="The journey continues" width="100%">
+  <br>
+  <em>Pack light. Travel far </em>
+</div>

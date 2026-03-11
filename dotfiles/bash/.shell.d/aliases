@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# SLURM
+if command -v sacct &>/dev/null; then
+    alias mysacct='sacct -u $USER --units=G --format "JobID%20,JobName,Partition,NodeList,Elapsed,CPUTime,ReqMem,MaxRSS,State%15,AllocTRES%32" --starttime=$(date -d "1 week ago" +%Y-%m-%d)'
+fi
+
+alias du="du -hx --max-depth=1"
