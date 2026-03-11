@@ -1,6 +1,6 @@
 <img align="right" src="images/rock_tools.jpg" alt="Stone tools" width="30%">
 
-# mousterian-ux
+## **mousterian-ux**
 
 A workspace toolkit for bioinformaticians who move between systems.
 
