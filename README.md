@@ -194,6 +194,7 @@ If you are new to Vim, this is all you need to get started:
 |-----|--------------|
 | `i` | Enter insert mode (start typing) |
 | `Esc` | Go back to normal mode |
+| `:q` or `:wq`| to quit, or save and quit (in normal mode)|
 | `h/j/k/l` | Move left/down/up/right |
 | `w / b` | Jump forward/back by word |
 | `dd` | Delete line |
