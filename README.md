@@ -58,7 +58,7 @@ Choose your mode when prompted.
 ### What gets installed
 
 #### Terminal tools
-`tmux` · `tree` · `vim` · `stow` · `pipx` · build essentials
+`tmux` · `tree` · `vim` · `pipx` · build essentials
 
 #### Desktop apps (Ubuntu mode)
 VS Code · Obsidian · Inkscape · VLC · LibreOffice · Flameshot · LocalSend · Ulauncher · Alacritty
