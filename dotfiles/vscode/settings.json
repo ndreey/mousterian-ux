@@ -1,31 +1,54 @@
+// Place your settings in this file to override the defaults
+// To reset to default settings, remove this file.
+
 {
+  // Trust
   "security.workspace.trust.untrustedFiles": "open",
+
+  // Git
   "git.ignoreMissingGitWarning": true,
+
+  // Editor
   "editor.minimap.enabled": false,
   "editor.fontSize": 12,
+  "editor.rulers": [80, 100],
+  "editor.occurrencesHighlight": "off",
+  "editor.selectionHighlight": false,
+
+  // Indentation
   "editor.tabSize": 2,
   "editor.insertSpaces": false,
   "editor.detectIndentation": false,
-  "editor.occurrencesHighlight": "off",
-  "editor.selectionHighlight": false,
-  "editor.suggestOnTriggerCharacters": false,
+
+  // Autocomplete
   "editor.tabCompletion": "on",
-  "editor.rulers": [80, 100],
+  "editor.suggestOnTriggerCharacters": false,
   "editor.quickSuggestions": {
     "other": false,
     "comments": false,
     "strings": false
   },
+
+  // Files
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
+
+  // Extensions
   "extensions.ignoreRecommendations": true,
+
+  // Markdown
   "markdown-preview-enhanced.previewTheme": "github-dark.css",
   "markdown-preview-enhanced.codeBlockTheme": "github-dark.css",
   "markdown-preview-enhanced.enablePreviewZenMode": true,
+  "workbench.editorAssociations": { "*.md": "default" },
+
+  // Window
   "window.menuBarVisibility": "compact",
   "window.titleBarStyle": "custom",
+
+  // Theme
   "workbench.colorTheme": "Everforest Pro Dark Vibrant",
-  "workbench.editorAssociations": {
-    "*.md": "default"
-    }
+
+  // Vim
+  "vim.useSystemClipboard": true
 }
