@@ -1,0 +1,92 @@
+// Place your key bindings in this file to override the defaults
+// To reset to default keybindings, remove this file.
+
+
+[
+	// Vim like navigation
+	{
+		"key": "ctrl+h",
+		"command": "workbench.action.navigateLeft"
+	},
+	{
+		"key": "ctrl+j",
+		"command": "workbench.action.navigateDown"
+	},
+	{
+		"key": "ctrl+k",
+		"command": "workbench.action.navigateUp"
+	},
+	{
+		"key": "ctrl+l",
+		"command": "workbench.action.navigateRight"
+	},
+
+	// List all open "windows/editors/tabs" to quickly switch between them
+	{
+		"key": "space ,",
+		"command": "workbench.action.showAllEditors",
+		"when": "vim.mode == 'Normal' && editorTextFocus"
+	},
+
+	// Show the file explorer or close the explorer
+	{
+		"key": "space e",
+		"command": "workbench.action.toggleSidebarVisibility",
+		"when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+	},
+
+	// Tab between the open editors in current group ("window")
+	{
+		"key": "tab",
+		"command": "workbench.action.nextEditorInGroup",
+		"when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
+	},
+
+	// Shift+Tab to go to the previous editor in the current group ("window")
+	{
+		"key": "shift+tab",
+		"command": "workbench.action.previousEditorInGroup",
+		"when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
+	},
+
+
+
+	// Coding
+	// Move lines up and down with Shift+J/K
+	{
+		"key": "shift-j",
+		"command": "editor.action.moveLinesDownAction",
+		"when": "vim.mode != 'Insert' && editorTextFocus"
+	},
+	{
+		"key": "shift-k",
+		"command": "editor.action.moveLinesUpAction",
+		"when": "vim.mode != 'Insert' && editorTextFocus"
+	},
+
+	// Rename variables across the file
+	{
+		"key": "space c r",
+		"command": "editor.action.rename",
+		"when": "vim.mode == 'Normal' && editorTextFocus"
+	},
+
+	// Quick open a file
+	{
+		"key": "space space",
+		"command": "workbench.action.quickOpen",
+		"when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+	}
+
+	// Show the text as when you hover over it, but with Ctrl+K
+	// Disabled for now sinmce i dont use it that often.
+	//{
+	//	"key": "shift-k",
+	//	"command": "editor.action.showHover",
+	//	"when": "vim.mode == 'Normal' && editorTextFocus"
+	//}
+
+
+
+
+]

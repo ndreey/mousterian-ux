@@ -21,6 +21,9 @@ mkdir -p $HOME/.config/Code/User
 code --install-extension andreilucaci.everforest-pro
 code --install-extension rokoroku.vscode-theme-darcula
 
+# Install the VIM extension for VSCode
+code --install-extension vscodevim.vim
+
 # ssh and hpc related
 code --install-extension ms-vscode-remote.remote-ssh
 code --install-extension ms-vscode.live-server
