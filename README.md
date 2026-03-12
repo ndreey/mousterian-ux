@@ -124,9 +124,9 @@ Illustrations are by **Zdenek Burian** from the books "*Great Discoveries*" and 
 
 ---
 
-## More info
+### More info
 
-### Project structure
+#### Project structure
 ```
 mousterian-ux/
 ├── mousterian-ux.sh          # start here
@@ -144,7 +144,7 @@ mousterian-ux/
     └── ...
 ```
 
-### Keybindings
+#### Keybindings
 
 ##### GNOME
 
