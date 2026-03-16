@@ -1,67 +1,67 @@
 {
-  // Trust
-  "security.workspace.trust.untrustedFiles": "open",
-  "security.workspace.trust.enabled": false,
+	// Trust
+	"security.workspace.trust.untrustedFiles": "open",
+	"security.workspace.trust.enabled": false,
 
-  // Git
-  "git.ignoreMissingGitWarning": true,
+	// Git
+	"git.ignoreMissingGitWarning": true,
 
-  // Editor
+	// Editor
 	"editor.minimap.enabled": false,
-	"editor.fontSize": 13,
-  "editor.rulers": [80, 100],
-  "editor.occurrencesHighlight": "off",
-  "editor.selectionHighlight": false,
+	"editor.fontSize": 14,
+	"editor.rulers": [80, 100],
+	"editor.occurrencesHighlight": "off",
+	"editor.selectionHighlight": false,
 
-  // Indentation
-  "editor.tabSize": 2,
-  "editor.insertSpaces": false,
-  "editor.detectIndentation": false,
+	// Indentation
+	"editor.tabSize": 2,
+	"editor.insertSpaces": false,
+	"editor.detectIndentation": false,
 
-  // Autocomplete
-  "editor.tabCompletion": "on",
+	// Autocomplete
+	"editor.tabCompletion": "on",
 	"editor.cursorSmoothCaretAnimation": "on",
-  "editor.suggestOnTriggerCharacters": false,
-  "editor.quickSuggestions": {
-    "other": false,
-    "comments": false,
-    "strings": false
-  },
+	"editor.suggestOnTriggerCharacters": false,
+	"editor.quickSuggestions": {
+		"other": false,
+		"comments": false,
+		"strings": false
+	},
 	"editor.tokenColorCustomizations": {
-    "[Nord Deep]": {
-      "textMateRules": [
-        {
-          "scope": "source.groovy.embedded.source",
-          "settings": {
-            "foreground": "#D8DEE9"
-          }
-        }
-      ]
-    }
-  },
+		"[Nord Deep]": {
+			"textMateRules": [
+				{
+					"scope": "source.groovy.embedded.source",
+					"settings": {
+						"foreground": "#D8DEE9"
+					}
+				}
+			]
+		}
+	},
 
-  // Files
-  "files.trimTrailingWhitespace": true,
-  "files.insertFinalNewline": true,
+	// Files
+	"files.trimTrailingWhitespace": true,
+	"files.insertFinalNewline": true,
 
-  // Extensions
-  "extensions.ignoreRecommendations": true,
+	// Extensions
+	"extensions.ignoreRecommendations": true,
 
-  // Markdown
-  "markdown-preview-enhanced.previewTheme": "github-dark.css",
-  "markdown-preview-enhanced.codeBlockTheme": "github-dark.css",
-  "markdown-preview-enhanced.enablePreviewZenMode": true,
-  "workbench.editorAssociations": { "*.md": "default" },
+	// Markdown
+	"markdown-preview-enhanced.previewTheme": "github-dark.css",
+	"markdown-preview-enhanced.codeBlockTheme": "github-dark.css",
+	"markdown-preview-enhanced.enablePreviewZenMode": true,
+	"workbench.editorAssociations": { "*.md": "default" },
 
-  // Window theme and layout
+	// Window theme and layout
 	"workbench.colorTheme:": "Nord Deep",
 	"workbench.iconTheme": null,
- 	"workbench.activityBar.location": "top",
+	"workbench.activityBar.location": "top",
 	"chat.viewSessions.orientation": "stacked",
 	"window.menuBarVisibility": "compact",
 	"window.titleBarStyle": "custom",
 
-  // Vim
+	// Vim
 	"vim.useSystemClipboard": true,
 
 	// Terminal
@@ -70,4 +70,5 @@
 	"files.associations": {
 		"renv.lock": "json"
 	},
+	"workbench.colorTheme": "Nord Deep",
 }
