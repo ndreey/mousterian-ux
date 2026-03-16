@@ -1,13 +1,13 @@
-import = ["~/.config/alacritty/everforest_dark_hard.toml"]
+import = ["~/.config/alacritty/nordic.toml"]
 
 
 
 [window]
 padding.x = 5
 padding.y = 5
-opacity = 0.88
+opacity = 0.92
 blur = true
-title = "pack lightly, travel far"
+#title = "pack lightly, travel far"
 decorations = "Full"
 
 [scrolling]
@@ -15,7 +15,7 @@ history = 10000
 multiplier = 3
 
 [font]
-size = 10
+size = 14
 
 [cursor]
 style.shape = "Beam"
