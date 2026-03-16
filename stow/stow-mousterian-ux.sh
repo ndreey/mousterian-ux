@@ -2,7 +2,7 @@
 
 DOTFILES=dotfiles
 
-mkdir -p "$HOME/.config/"{autostart,gtk-3.0,ulauncher,alacritty}
+mkdir -p "$HOME/.config/"{autostart,gtk-3.0,ulauncher,alacritty,Code/User,Positron/User}
 
 # alacritty
 cp "$DOTFILES/alacritty/alacritty.toml" "$HOME/.config/alacritty/"
@@ -24,4 +24,7 @@ cp "$DOTFILES/ulauncher/ulauncher.desktop" "$HOME/.config/autostart/"
 cp "$DOTFILES/ulauncher/settings.json" "$HOME/.config/ulauncher/"
 
 # vscode
-cp "$DOTFILES/vscode/settings.json" "$HOME/.config/Code/User/"
+cp "$DOTFILES/vscode/*.json" "$HOME/.config/Code/User/"
+
+# positron
+cp "$DOTFILES/positron/*.json" "$HOME/.config/Positron/User/"
