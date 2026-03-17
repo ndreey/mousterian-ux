@@ -24,7 +24,7 @@ cp "$DOTFILES/ulauncher/ulauncher.desktop" "$HOME/.config/autostart/"
 cp "$DOTFILES/ulauncher/settings.json" "$HOME/.config/ulauncher/"
 
 # vscode
-cp "$DOTFILES/vscode/*.json" "$HOME/.config/Code/User/"
+cp $DOTFILES/vscode/*.json "$HOME/.config/Code/User/"
 
 # positron
-cp "$DOTFILES/positron/*.json" "$HOME/.config/Positron/User/"
+cp $DOTFILES/positron/*.json "$HOME/.config/Positron/User/"

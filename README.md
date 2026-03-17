@@ -28,6 +28,19 @@ Heavily inspired by [Omakub](https://omakub.org/) by DHH, but tilted toward scie
 - Internet connection
 - About 5-25 minutes and a cup of coffee
 
+Tested on this.
+```bash
+> lsb_release -a
+No LSB modules are available.
+Distributor ID:	Ubuntu
+Description:	Ubuntu 24.04.4 LTS
+Release:	24.04
+Codename:	noble
+
+> uname -m
+x86_64
+```
+
 
 ---
 
@@ -61,8 +74,7 @@ Choose your mode when prompted.
 `tmux` · `tree` · `vim` · `pipx` · build essentials
 
 #### Desktop apps (Ubuntu mode)
-VS Code · Obsidian · Inkscape · VLC · LibreOffice · Flameshot · LocalSend · Ulauncher · Alacritty
-Zotero · Zoom · Discord · Spotify
+VS Code · Obsidian · Inkscape · VLC · LibreOffice · Flameshot · LocalSend · Ulauncher · Alacritty · Zotero · Zoom · Discord · Spotify · Positron
 
 #### Mamba environments for basics
 - **cli** — everyday tools (pigz, wget, curl, git)
