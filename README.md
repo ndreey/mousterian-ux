@@ -62,7 +62,7 @@ Choose your mode when prompted.
 
 #### Desktop apps (Ubuntu mode)
 VS Code · Obsidian · Inkscape · VLC · LibreOffice · Flameshot · LocalSend · Ulauncher · Alacritty
-Zotero · Zoom · Discord ·
+Zotero · Zoom · Discord · Spotify
 
 #### Mamba environments for basics
 - **cli** — everyday tools (pigz, wget, curl, git)
