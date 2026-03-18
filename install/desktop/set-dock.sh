@@ -1,21 +1,17 @@
 #!/bin/bash
 
-# To customize, check out the list of .desktop files in /usr/share/applications 
+# To customize, check out the list of .desktop files in /usr/share/applications
 # and ~/.local/share/applications.
 
 
 # Favorite apps for dock
 apps=(
-    "org.gnome.Terminal.desktop"
+  "brave-browser.desktop"
+	"Alacritty.desktop"
 	"code.desktop"
-	"WhatsApp.desktop"
-	"org.inkscape.Inkscape.desktop"
-	"Zoom.desktop"
 	"md.obsidian.Obsidian.desktop"
-	"Activity.desktop"
-	"org.gnome.Settings.desktop"
 	"org.gnome.Nautilus.desktop"
-	"localsend_app.desktop"
+	"org.gnome.Settings.desktop"
 )
 
 # Array to hold installed favorite apps
