@@ -76,7 +76,7 @@ do
 
       # Install mousterian toolkit and ux
       source init/init-mousterian-ux.sh
-      
+
       # Revert to normal idle and lock settings
       gsettings set org.gnome.desktop.screensaver lock-enabled true
       gsettings set org.gnome.desktop.session idle-delay 300
@@ -91,6 +91,8 @@ do
       echo "Installing $MOUST_VERSION of the core mousterian toolkit that is safe for HPC and user.."
       echo -e "Be prepared to interact with prompts\n"
 
+			# Backup dotfiles before installing
+      source backup/oldowan-backup.sh
       # Install the mamba env and stow the dotfiles and configs for the HPC user environment
       source init/init-mousterian-hpc.sh
 
@@ -98,14 +100,14 @@ do
       echo -e "You need to restart your terminal or source your ~/.bashrc"
       break
       ;;
-    
+
     # Just backup and stow the dotfiles and configs, no installs or checks
     "stow-only")
       echo "Selected: Stow dotfiles and configs only (no install)"
       source init/init-stow.sh
       break
       ;;
-    
+
     # Just check permissions, os release and desktop environment, but don't install anything
     "check-only")
       echo -e "Selected: Check permissions, OS and desktop environment (no install)\n"

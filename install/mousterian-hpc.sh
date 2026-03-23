@@ -10,9 +10,6 @@ source install/mousterian-mamba.sh
 mamba activate cli
 sleep 2
 
-# Backup dotfiles first
-source backup/oldowan-backup.sh
-
 # stow the dotfiles
 source stow/stow-mousterian-toolkit.sh
 
