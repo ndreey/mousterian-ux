@@ -71,4 +71,5 @@
 		"renv.lock": "json"
 	},
 	"workbench.colorTheme": "Nord Deep",
+	"terminal.integrated.lineHeight": 1.4
 }
