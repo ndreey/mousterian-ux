@@ -13,6 +13,9 @@ cp "$DOTFILES/bash/.bashrc" "$HOME/"
 cp "$DOTFILES/bash/.profile" "$HOME/"
 cp -r "$DOTFILES/bash/.shell.d" "$HOME/"
 
+# vim
+cp "$DOTFILES/vim/.vimrc" "$HOME/"
+
 # git
 cp "$DOTFILES/git/.gitconfig" "$HOME/"
 

@@ -12,6 +12,7 @@ FILES=(
   "$HOME/.bashrc"
   "$HOME/.bashrc.bak"
   "$HOME/.profile"
+	"$HOME/.vimrc"
   "$HOME/.shell.d"
   "$HOME/.gitconfig"
   "$HOME/.tmux.conf"
