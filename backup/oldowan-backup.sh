@@ -13,6 +13,7 @@ FILES=(
   "$HOME/.bashrc.bak"
   "$HOME/.profile"
 	"$HOME/.vimrc"
+	"$HOME/.condarc"
   "$HOME/.shell.d"
   "$HOME/.gitconfig"
   "$HOME/.tmux.conf"

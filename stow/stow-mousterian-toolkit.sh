@@ -9,6 +9,9 @@ cp "$DOTFILES/bash/.bashrc" "$HOME/"
 cp "$DOTFILES/bash/.profile" "$HOME/"
 cp -r "$DOTFILES/bash/.shell.d" "$HOME/"
 
+# conda
+cp "$DOTFILES/conda/.condarc" "$HOME/"
+
 # git
 cp "$DOTFILES/git/.gitconfig" "$HOME/"
 
