@@ -2,13 +2,18 @@
 
 # Load global bashrc if it exists
 if [ -f /etc/bashrc ]; then
-	 source /etc/bashrc
+    source /etc/bashrc
 fi
 
-# Source custom
+# Always source (needed in both interactive and non-interactive shells)
 source $HOME/.shell.d/functions
-source $HOME/.shell.d/shell
-source $HOME/.shell.d/prompt
-source $HOME/.shell.d/aliases
+source $HOME/.shell.d/variables
+
+# Only in interactive shells
+if [[ $- == *i* ]]; then
+    source $HOME/.shell.d/shell
+    source $HOME/.shell.d/prompt
+    source $HOME/.shell.d/aliases
+fi
 
 export INPUTRC=$HOME/.shell.d/inputrc
