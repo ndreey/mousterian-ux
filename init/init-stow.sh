@@ -13,8 +13,9 @@ while true; do
     break
   fi
 
-  # Expand $HOME or ~ in case user typed it literally
-  MAMBA_EXE_PATH="${MAMBA_EXE_PATH/#\~/$HOME}"
+	# Expand ~ and $HOME in the provided path
+	MAMBA_EXE_PATH="${MAMBA_EXE_PATH/#\~/$HOME}"
+	MAMBA_EXE_PATH="${MAMBA_EXE_PATH/\$HOME/$HOME}"
 
   if [ -f "$MAMBA_EXE_PATH" ]; then
     break
