@@ -17,11 +17,15 @@ FILES=(
   "$HOME/.shell.d"
   "$HOME/.gitconfig"
   "$HOME/.tmux.conf"
+	"$HOME/.config/tmux/tmux.conf"
 	"$HOME/.config/alacritty"
   "$HOME/.config/autostart"
   "$HOME/.config/gtk-3.0/settings.ini"
   "$HOME/.config/gtk-4.0/settings.ini"
   "$HOME/.config/Code/User/settings.json"
+	"$HOME/.config/Code/User/keybindings.json"
+	"$HOME/.config/Positron/User/settings.json"
+	"$HOME/.config/Positron/User/keybindings.json"
   "$HOME/.config/ulauncher/settings.json"
 )
 
