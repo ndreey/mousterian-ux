@@ -9,16 +9,8 @@ source install/mousterian-mamba.sh
 # Install desktop tools and tweaks
 source install/mousterian-desktop.sh
 
-# Backup dotfiles before installing
-source backup/oldowan-backup.sh
-
 # Stow dotfiles
 source stow/stow-mousterian-ux.sh
 
-# Initialize mamba shell integration
-eval "$(mamba shell hook --shell bash)"
-sleep 1
-
-# populate .bashrc with conda and mamba init lines
-conda init bash
-mamba shell init
+# Set the lazy loading of conda/mamba in .bashrc to speed up shell startup time.
+source install/mamba/set-lazyload.sh
